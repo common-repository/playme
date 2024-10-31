@@ -1,0 +1,237 @@
+/***********************************************************************************************
+*	Front-end
+***********************************************************************************************/
+#PlayMe {
+	border: 1px solid #EEE;
+	background: #F8F8F8;
+	padding: 0 10px 10px;
+}
+#PlayMe label {
+	width: 100%;
+	display: block;
+	font-size: 13px;
+}
+#PlayMe label.PlayMe_wide input,
+#PlayMe label.PlayMe_wide textarea {
+	margin-top: 4px;
+}
+#PlayMe label.PlayMe_wide textarea {
+	padding: 5px !important;
+	width: 100%;
+	margin-bottom: 9px;
+}
+#PlayMe label.PlayMe_wide.required strong,
+#PlayMe label.PlayMe_wide.required.flagged {
+	color: #B74327;
+}
+#PlayMe label.PlayMe_hidden {
+	display: none;
+}
+#PlayMe_submit {
+	margin: 0;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 16px;
+	border: 1px solid white;
+	background: none;
+	box-shadow: none;
+	border-radius: 0px;
+	background-color: #a1a1a1;
+	color: white;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+	padding: 5px 12px 6px;
+	cursor: pointer;
+	-webkit-transition: background-color 150ms linear;
+    -ms-transition: background-color 150ms linear;
+    transition: background-color 150ms linear;
+}
+#PlayMe_submit:hover {
+	background-color: #B74327;
+}
+#PlayMe div.g-recaptcha {
+	margin-bottom: 9px;
+	clear: both;
+} 
+#PlayMe_status.notice {
+	display:none;
+	background: #fff;
+    border-left: 4px solid #fff;
+    border-left-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    margin: 0 -10px 6px;
+    padding: 1px 12px;
+    font-size: 13px;
+    line-height: 28px;
+}
+#PlayMe_status.notice.notice-error {
+	display:block;
+	border-left-color: #990000;
+}
+#PlayMe_status.notice.notice-success {
+	display:block;
+	border-left-color: #46b450;
+}
+
+/***********************************************************************************************
+*	Back-end
+***********************************************************************************************/
+#PlayMeAdmin .dashicons-format-audio::before {
+	font-size:22px;
+    margin-top: 5px;
+    margin-right: 8px;
+}
+
+/***********************************************************************************************
+*	Back-end > Results Table
+***********************************************************************************************/
+#PlayMeAdmin table {
+	width: 100%;
+	background-color: #fcfcfc;
+	font-size: 13px;
+	line-height: 28px;
+}
+#PlayMeAdmin table th,
+#PlayMeAdmin table td {
+	text-align: left;
+	padding: 0 10px;
+	min-width: 114px;
+	color: #444;
+}
+#PlayMeAdmin table td {
+	line-height: 14px;
+	font-size: 12px;
+}
+#PlayMeAdmin table thead tr th {
+	background-color: #661B0A;
+	color: white;
+	font-size: 12px;
+}
+#PlayMeAdmin tbody tr.deleted td {
+	background-image: url(_img/missing.png);
+	color: #4444444d;
+}
+#PlayMeAdmin tbody tr.deleted td a {
+	color: #4444444d;
+}
+#PlayMeAdmin table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+#PlayMeAdmin a {
+	color: #B74327;
+	cursor: help;
+}
+#PlayMeAdmin button {
+	border: 1px solid white;
+	background: none;
+	box-shadow: none;
+	border-radius: 0px;
+	background-color: #a1a1a1;
+	color: white;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+	padding: 3px 8px 4px;
+	cursor: pointer;
+	-webkit-transition: background-color 150ms linear;
+    -ms-transition: background-color 150ms linear;
+    transition: background-color 150ms linear;
+}
+#PlayMeAdmin button:hover {
+	background-color: #B74327;
+}
+#PlayMeAdmin table td:last-child,
+#PlayMeAdmin table th:last-child {
+	width: 90px;
+	min-width: 90px;
+	text-align: center;
+	padding: 0;
+}
+#PlayMeAdmin table button {
+	width: 90px;
+	display: inline-block;
+}
+#PlayMeAdmin tr.PlayMe_placeholder td {
+	text-align: center;
+	height: 30px;
+}
+#PlayMeAdmin #playme_timer {
+	width: 100%;
+	height: 6px;
+	padding: 0 2px;
+	box-sizing: border-box;
+	background-color: white;
+}
+#PlayMeAdmin #playme_timer > span {
+	width: 0px;
+	height: 4px;
+	background-color: #B74327;
+	display: block;
+	-webkit-transition: width 1s; /* Safari */
+    transition: width 1s;
+}
+#PlayMe_refresh {
+	margin-top: 10px;
+}
+/***********************************************************************************************
+*	Back-end > reCAPTCHA
+***********************************************************************************************/
+#PlayMe_recaptcha td { padding: 0 !important; }
+#PlayMe_recaptcha input {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background-color: #fff;
+    font-family: inherit;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    color: rgba(0,0,0,0.75);
+    display: block;
+    font-size: 0.875em;
+    margin: 0;
+    padding: 0.5em;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: -webkit-box-shadow 0.45s,border-color 0.45s ease-in-out;
+    -moz-transition: -moz-box-shadow 0.45s,border-color 0.45s ease-in-out;
+    transition: box-shadow 0.45s,border-color 0.45s ease-in-out;
+}
+p.PlayMe_instructions {
+	font-size: 12px;
+	background-color: #fcfcfc;
+	padding: 10px;
+	border: 1px solid #DDD;
+	border-radius: 3px;
+}
+/***********************************************************************************************
+*	Back-end > Footer
+***********************************************************************************************/
+#PlayMeAdmin div.footer {
+	display: flex; 
+	flex-direction: row; 
+	justify-content: space-between;
+	margin-top:30px;
+	border: 1px solid #DDD;
+	background-color: #FFF;
+	border-radius: 3px;
+	padding: 0 10px;
+}
+#PlayMeAdmin div.footer > div {
+	flex-grow: 1;
+	flex-basis: 0;
+	margin-top: 12px;
+}
+#PlayMeAdmin div.footer > div > a > img {
+	margin: 10px 0;
+}
+#PlayMeAdmin div.footer p {
+	font-size: 11px;
+	max-width: 90%;
+}
+#PlayMeAdmin div.donate {
+	display:none;
+}
+#PlayMeAdmin small i.dashicons-format-audio::before {
+	margin: 5px -2px 0 0;
+	font-size: 12px;
+}
